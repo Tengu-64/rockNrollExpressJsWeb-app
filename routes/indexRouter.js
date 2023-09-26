@@ -24,7 +24,7 @@ router.get('/auth', (req,res)=>{
             console.log('создание админа')
             User.create({
                 name:process.env.ADMIN_NAME,
-                email:process.name.ADMIN_EMAIL,
+                email:process.env.ADMIN_EMAIL,
                 password:process.env.ADMIN_PASSWORD,
                 role: 'ADMIN'
             })
