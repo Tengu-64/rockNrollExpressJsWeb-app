@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Топики</title>
+	{{> LinkCssJs}}
+		<meta charset="utf-8">
+		<style>
+			#about {
+				font-size: medium;
+				text-align: justify;
+				padding: 10px;
+			}
+			a{
+				text-decoration: none;
+			}
+			#create-topic{
+				padding-right: 10px;
+				
+				text-align: right;
+			}
+
+		</style>
+</head>
+
+<body id="page1">
+	<div class="extra">
+		<header>
+			{{> header}}
+		</header>
+
+
+		<section id="content">
+			<div class="main">
+				<div class="bg-2">
+					<div class="content-padding-1">
+						<div class="container_12">
+							<div class="wrapper">
+								<div>
+									<h3 class="letter" style="text-align: center;">Топики</h3>
+								</div>
+
+								{{#each topics}}
+								<div style="margin: 10px;">
+									<h3 class="letter"><a href="/topic/{{this.id}}">{{this.title}}</a></h3>
+								</div>
+								{{/each}}
+							
+								
+							</div>
+							
+						</div>
+						{{#if cookieId}}
+					</div>
+						<div id="create-topic">
+							<a href="/topic/create"><h3>+</h3></a>
+						</div>
+						{{/if}}
+				</div>
+
+			</div>
+			
+			
+			<div class="block"></div>
+		</section>
+	</div>
+	{{> footer}}
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактировать пользователя</title>
+</head>
+<body>
+    <p>Редактировать пользователя</p>
+        <form  method="post">
+            <label for="">Имя: </label><input type="text" name="name" value="{{user.name}}"><br>
+            <label for="">email: </label> <input type="email" name="email" value="{{user.email}}"><br>
+            <label for="">пароль: </label><input type="text" name="password" value="{{user.password}}"><br>
+            <input type="hidden" name="id" value="{{user.id}}">
+            <label for="">роль: </label>
+            <select name="role" id="">
+                <option name="USER">USER</option>
+                <option name="ADMIN" name="">ADMIN</option>
+            </select><br>
+            <button type="submit"> редактировать </button>
+       </form>
+</body>
+</html>

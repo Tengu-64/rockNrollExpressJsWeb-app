@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Форма авторизации</title>
+	<meta charset="utf-8">
+	{{> LinkCssJs}}
+</head>
+
+<body id="page5">
+	<div class="extra">
+
+		<header>
+			{{> header}}
+		</header>
+
+		<section id="content">
+			<div class="main">
+				<div class="content-padding-2">
+					<div class="container_12">
+						<div class="wrapper">
+							<article class="grid_8">
+								<div class="padding-grid-1">
+
+									
+									<h3>Создание <strong>топика</strong></h3>
+
+									<form id="contact-form" method="post">
+										<fieldset>
+											<label>
+												<span class="name-input">заголовок топика:</span>
+												<input name="title" value="" type="text"
+													onBlur="if(this.value=='') this.value=''"
+													onFocus="if(this.value =='' ) this.value=''" />
+											</label>
+											<label>
+												<span class="name-input">топик:</span>
+												 <textarea type="text" name="description"></textarea><br>
+											</label>
+										</fieldset>
+										<div class="link-form">
+											<input type="submit" value="создать топик"><br>
+											
+										</div>
+										<div class="clear"></div>
+									</form>
+						
+
+
+
+
+
+
+								</div>
+							</article>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="block"></div>
+		</section>
+	</div>
+	{{> footer}}
+</body>
+
+</html>

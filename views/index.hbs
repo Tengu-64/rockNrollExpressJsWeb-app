@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>главная страница</title>
+	{{> LinkCssJs}}
+	<meta charset="utf-8">
+	<style>
+		#about {
+			font-size: medium;
+			text-align: justify;
+			padding: 10px;
+		}
+
+	</style>
+</head>
+
+<body id="page1">
+	<div class="extra">
+		<header>
+			{{> header}}
+			{{> slider}}
+		</header>
+
+
+		<section id="content">
+			<div class="main">
+				<div class="bg-2">
+					<div class="content-padding-1">
+						<div class="container_12">
+							<div class="wrapper">
+								<div>
+
+									<h3 class="letter" style="text-align: center;"> Для кого этот сайт?</h3>
+									<p id="about">Существуют люди, которым страшно идти на концерт одному. Если ты,
+										дорогой посетитель сайта, относищься к такой категории людей, то ты попал по
+										нужному URL-адресу! Здесь ты можешь познакомиться с люльми, которым нравятся
+										концерты "пожестче", пообщаться с ними и надеюсь перебороть свой страх огромной
+										толпы :)</p>
+								</div>
+
+								<h3 class="letter">Существует <strong>ряд вещей, которые следовало бы знать тем кто
+										боится или хочет пойти на концерт в первый раз:</strong></h3>
+
+								<article class="grid_4">
+									<div class="padding-grid-1">
+										<div class="wrapper img-indent-bot1">
+											<time class="time time-stule-1" datetime="2011-11-09"> <strong
+													class="text-1">1</strong></time>
+											<div class="extra-wrap">
+												<div class="indent-top">
+													Человек рядом с тобой - твой товарищ, уважай его право на получение
+													удовольствие от концерта.
+												</div>
+											</div>
+										</div>
+										<div class="wrapper img-indent-bot1">
+											<time class="time time-stule-1" datetime="2011-11-07"> <strong
+													class="text-1">2</strong></time>
+											<div class="extra-wrap">
+												<div class="indent-top">
+													Алкоголь - твой враг, и в клубные бары заглядывать не очень годно,
+													если ты собираешься идти в толпу, потому что пункт 1. Получай
+													удовольствие без стимуляторов.
+												</div>
+											</div>
+										</div>
+										<div class="wrapper">
+											<time class="time time-stule-1" datetime="2011-11-02"> <strong
+													class="text-1">3</strong></time>
+											<div class="extra-wrap">
+												<div class="indent-top">
+													Хочешь покурить, даже вопреки запрету на курение в местах проведения
+													концертов, и тебя никак не убедить соблюдать пункт 1 - отойди в
+													сторону ото всех.
+												</div>
+											</div>
+										</div>
+									</div>
+								</article>
+
+
+								<article class="grid_4">
+									<div class="padding-grid-1">
+										<div class="wrapper img-indent-bot1">
+											<time class="time time-stule-1" datetime="2011-11-09"> <strong
+													class="text-1">4</strong></time>
+											<div class="extra-wrap">
+												<div class="indent-top">
+													Минимизируй количество вещей в карманах. Если есть возможность
+													передать вещи другу - сделай это :)
+												</div>
+											</div>
+										</div>
+										<div class="wrapper img-indent-bot1">
+											<time class="time time-stule-1" datetime="2011-11-07"> <strong
+													class="text-1">5</strong></time>
+											<div class="extra-wrap">
+												<div class="indent-top">
+													Если у товарища рядом развязались шнурки, если он упал, и прочее
+													подобное - твой долг оградить его от остальных, по возможности
+													привлечь еще товарищей для этого.
+												</div>
+											</div>
+										</div>
+										<div class="wrapper">
+											<time class="time time-stule-1" datetime="2011-11-02"> <strong
+													class="text-1">6</strong></time>
+											<div class="extra-wrap">
+												<div class="indent-top">
+													Если ты обладатель массивного тела - старайся сводить на нет качку
+													вперед-назад людей.
+												</div>
+											</div>
+										</div>
+									</div>
+								</article>
+
+
+
+								<article class="grid_4 alpha">
+									<div class="padding-grid-2">
+										<div class="wrapper">
+											<figure class="style-img fleft"><a href="/topic"><img
+														src="images/page1-img1.jpg" alt=""></a></figure>
+										</div>
+									</div>
+								</article>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="block"></div>
+		</section>
+	</div>
+	{{> footer}}
+</body>
+
+</html>

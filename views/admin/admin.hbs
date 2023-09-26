@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админка</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+    <header>
+        <h1>Панель администратора</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#users">все пользователи</a></li>
+            <li><a href="#groups">все группы</a></li>
+            <li><a href="#audios">аудио</a></li>
+            <li><a href="#topics">топики</a></li>
+        </ul>
+    </nav>
+
+
+    <div id="users">
+    <p>пользователи:</p>
+    <p>количество пользователей: {{len}}</p>
+    <a href="/admin/create-user">добавить пользователя</a>
+    <table border="1">
+        <tr>
+            <td>id</td>
+            <td> Имя</td>
+            <td>email</td>
+            <td>роль</td>
+            <td>пароль</td>
+            <td>редактировать</td>
+            <td>удалить</td>
+        </tr>
+        {{#each users}}
+        <tr>
+            <td>{{this.id}}</td>
+            <td>{{this.name}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.role}}</td>
+            <td>{{this.password}}</td>
+            <td><a href="/admin/edit-user/{{this.id}}">редактировать</a></td>
+            <td>
+                <form action="admin/delete-user/{{this.id}} " method="post">
+                    <input type="submit" value="Удалить">
+                </form>
+            </td>
+        </tr>
+
+        {{/each}}
+    </table>
+    </div>
+
+
+
+    <div id="groups">
+        <p>Группы и аудио:</p>
+        <a href="/admin/create-group">добавить группу</a><br>
+        <table border="1">
+            <tr>
+                <td>id</td>
+                <td>название группы</td>
+            </tr>
+            {{#each groups}}
+            <tr>
+                <td>{{this.id}}</td>
+                <td>{{this.name}}</td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+
+
+    <div id="audios">
+        <a href="admin/create-audio">добавить аудио</a>
+        <table border="1">
+            <tr>
+                <td>id</td>
+                <td>название аудио</td>
+                <td>путь к аудио</td>
+                <td>група</td>
+                <td>удалить</td>
+            </tr>
+            {{#each audios}}
+            <tr>
+                <td>{{this.id}}</td>
+                <td>{{this.title}}</td>
+                <td>{{this.path}}</td>
+                <td>{{this.groupId}}</td>
+                <td><form action="admin/delete-audio/{{this.id}}" method="post"><input type="submit" value="удалить"></form></td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+
+    <div id="topics">
+        <p>Топики</p>
+        <a href="/admin/create-topic">добавить топик</a>
+
+        
+        <table border="1">
+        <tr>
+            <td>id</td>
+            <td>заголовок</td>
+            <td>топик</td>
+            <td>userId</td>
+            <td>удалить топик</td>
+        </tr>
+        {{#each topics}}
+            <tr>
+                <td>{{this.id}}</td>
+                <td>{{this.title}}</td>
+                <td>{{this.description}}</td>
+                <td>{{this.userId}}</td>
+                <td><form action="admin/delete-topic/{{this.id}}" method="post"><input type="submit" value="удалить"></form></td>
+            </tr>
+        {{/each}}
+        </table>
+    </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создать аудио</title>
+</head>
+<body>
+    <p>Добавить аудио:</p>
+        <form  method="post" enctype="multipart/form-data">
+            <label for="">название: </label><input type="text" name="title"><br>
+            <label for="">выбрать mp3 файл: </label> <input type="file" name="Audiopath"><br>
+            <label for="">группа: </label>
+            <select name="group" id="">
+                {{#each group}}
+                    <option name="{{this.id}}" value="{{this.id}}">{{this.name}}</option>
+                {{/each}}
+            </select><br>
+            <button type="submit"> Создать аудио</button>
+       </form>
+</body>
+</html>

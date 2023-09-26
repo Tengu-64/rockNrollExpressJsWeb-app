@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создать топик</title>
+</head>
+<body>
+    <p>Добавить топик:</p>
+        <form  method="post">
+            <label for="">название: </label><input type="text" name="title"><br>
+            <label for="">топик: </label> <textarea type="text" name="description"></textarea><br>
+            <label for="">автор топика: </label> 
+            <select name="userId" id="">
+                {{#each users}}
+                    <option name="{{this.id}}" value="{{this.id}}">{{this.name}}</option>
+                {{/each}}
+            </select>
+            <button type="submit"> Создать топик</button>
+       </form>
+</body>
+</html>

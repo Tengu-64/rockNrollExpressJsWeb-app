@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Аудио</title>
+	{{> LinkCssJs}}
+		<meta charset="utf-8">
+		<style>
+			#about {
+				font-size: medium;
+				text-align: justify;
+				padding: 10px;
+			}
+			a{
+				text-decoration: none;
+			}
+		</style>
+</head>
+
+<body id="page1">
+	<div class="extra">
+		<header>
+			{{> header}}
+		</header>
+
+
+		<section id="content">
+			<div class="main">
+				<div class="bg-2">
+					<div class="content-padding-1">
+						<div class="container_12">
+							<div class="wrapper">
+								<div>
+									<h3 class="letter" style="text-align: center;">Все группы</h3>
+								</div>
+
+								{{#each groups}}
+								<div>
+									<h3 class="letter"><a href="/audio/{{this.id}}">{{this.name}}</a></h3>
+								</div>
+								{{/each}}
+
+								<h3 class="letter" style="text-align: center;">Все аудио</h3>
+
+
+
+								<table>
+									{{#each audios}}
+									<tr>
+										<td>{{this.title}}</td>
+										<td>
+											<audio controls>
+												<source src="/{{this.path}}" type="audio/mpeg">
+											</audio>
+										</td>
+									</tr>
+									{{/each}}
+								</table>
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+			</div>
+			<div class="block"></div>
+		</section>
+	</div>
+	{{> footer}}
+</body>
+
+</html>

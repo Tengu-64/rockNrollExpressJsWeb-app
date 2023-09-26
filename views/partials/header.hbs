@@ -1,0 +1,33 @@
+
+    <div class="main">
+        <div class="bg-1">
+            <a href="/" style="text-align: center;"><img src="/logo.png" alt=""></a>
+        </div>
+        <nav>
+            <div class="menu-bg-tail">
+                <div class="menu-bg">
+                    <div class="container_12">
+                        <div class="grid_12">
+                            <ul class="menu">
+                                <li><a href="/topic">Топики</a></li>
+                                <li><a href="/audio">Аудио</a></li>
+                                <li><a href="/gallery">Галерея</a></li>
+
+                                <script>
+                                    if(document.cookie){
+                                            
+                                            document.write(' <li><a href="/my-page">моя страница</a></li> ')
+                                        } else{
+                                            document.write('<li class="last"><a href="/auth">авторизация</a></li>')
+                                        }
+                                    
+                                </script>   
+                                
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
